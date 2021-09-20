@@ -16,7 +16,6 @@ export default function Contact() {
         if(name && email) {
             setIsFetching(true);
             try {
-                console.log(process.env.REACT_APP_MAIL_URI);
                 await fetch(`https://${process.env.REACT_APP_MAIL_URI}`, {
                     method: "POST",
                     headers: {
@@ -38,6 +37,7 @@ export default function Contact() {
                 })
             } catch (err) {
                 setIsFetching(false);
+                alert("Some error occurred..!")
             }
         }
     }
