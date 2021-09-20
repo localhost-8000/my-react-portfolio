@@ -1,0 +1,299 @@
+@import "../../global.scss";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.works {
+    width: 100%;
+    height: calc(100vh - 70px);
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 10px 0;
+    position: relative;
+    box-sizing: border-box;
+
+    @include mobile {
+        min-height: calc(100vh - 70px);
+        height: auto;
+        padding: 6px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        background-color: $mainColor;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -1px;
+
+        @include ipad {
+            left: 180px;
+        }
+    }
+
+    .container {
+        padding: 15px 30px;
+        position: relative;
+        background: inherit;
+        width: 50%;
+        overflow-x: visible;
+
+        @include ipad {
+            width: 100%;
+            padding-left: 210px;
+            padding-right: 30px;
+        }
+
+        @include mobile {
+            padding-right: 0;
+        }
+
+        &.left {
+            left: 0;
+
+            .date {
+                right: -175px;
+
+                @include ipad {
+                    right: auto;
+                    left: 15px;
+                }
+            }
+
+            .icon {
+                right: 56px;
+
+                @include ipad {
+                    right: auto;
+                    left: 230px;
+                }
+
+                @include mobile {
+                    left: 215px;
+                }
+            }
+
+            &::after {
+
+                @include ipad {
+                    left: 172px;
+                }
+
+                @include mobile {
+                    left: 167px;
+                }
+            }
+
+            &::before {
+
+                @include ipad {
+                    left: 180px;
+                    border-color: transparent black transparent transparent;
+                }
+
+                @include mobile {
+                    left: 167px;
+                }
+            }
+
+            .content {
+
+                @include ipad {
+                    padding: 10px 15px 10px 90px;
+                    border-radius: 500px 0 0 500px;
+                }
+
+                @include mobile {
+                    padding: 8px 10px 8px 72px;
+                }
+            }
+        }
+
+        &.right {
+            left: 50%;
+
+            @include ipad {
+                left: 0%;
+            }
+            &::after {
+                left: -8px;
+
+                @include ipad {
+                    left: 172px;
+                }
+                
+                @include mobile {
+                    left: 167px;
+                }
+            }
+
+            &::before {
+                left: 8px;
+
+                @include ipad {
+                    left: 180px;
+                    border-color: transparent black transparent transparent;
+                }
+
+                @include mobile {
+                    left: 167px;
+                }
+            }
+
+            .date {
+                left: -185px;
+
+                @include ipad {
+                    right: auto;
+                    left: 15px;
+                }
+            }
+
+            .icon {
+                left: 56px;
+
+                @include ipad {
+                    right: auto;
+                    left: 230px;
+                }
+
+                @include mobile {
+                    left: 215px;
+                }
+            }
+
+            .content {
+                padding: 10px 15px 10px 90px;
+                border-radius: 500px 0 0 500px;
+
+                @include mobile {
+                    padding: 8px 10px 8px 72px;
+                }
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            top: calc(50% - 8px);
+            right: -8px;
+            background: white;
+            border: 2px solid $mainColor;
+            border-radius: 16px;
+            z-index: 1;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 2px;
+            top: calc(50% - 1px);
+            right: 8px;
+            background: $mainColor;
+            z-index: 1;
+        }
+
+        .date {
+            position: absolute;
+            display: inline-block;
+            top: calc(50% - 8px);
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: $mainColor;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 0;
+        }
+
+        .icon {
+            position: absolute;
+            display: inline-block;
+            width: 58px;
+            height: 58px;
+            top: calc(50% - 26px);
+            background: #e3cfd3ed;
+            border: 2px solid $mainColor;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 18px;
+            color: #006E51;
+            z-index: 1;
+
+        }
+
+        .content {
+            padding: 10px 90px 10px 15px;
+            background: #e3cfd3ed;
+            position: relative;
+            border-radius: 0 100px 100px 0;
+
+            h2 {
+                margin: 0 0 10px 0;
+                font-size: 18px;
+                color: $mainColor;
+            }
+
+            p {
+                margin: 0;
+                font-size: 15px;
+                color: black;
+            }
+        }
+    }
+}
+
+
+  
+//   @media (max-width: 767.98px) {
+//     .timeline::after {
+//       left: 90px;
+//     }
+  
+//     .container {
+//       width: 100%;
+//       padding-left: 120px;
+//       padding-right: 30px;
+//     }
+  
+//     .container.right {
+//       left: 0%;
+//     }
+  
+//     .container.left::after, 
+//     .container.right::after {
+//       left: 82px;
+//     }
+  
+//     .container.left::before,
+//     .container.right::before {
+//       left: 100px;
+//       border-color: transparent #006E51 transparent transparent;
+//     }
+  
+//     .container.left .date,
+//     .container.right .date {
+//       right: auto;
+//       left: 15px;
+//     }
+  
+//     .container.left .icon,
+//     .container.right .icon {
+//       right: auto;
+//       left: 146px;
+//     }
+  
+//     .container.left .content,
+//     .container.right .content {
+//       padding: 30px 30px 30px 90px;
+//       border-radius: 500px 0 0 500px;
+//     }
+//   }

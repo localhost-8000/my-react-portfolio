@@ -1,0 +1,211 @@
+@import "../../global.scss";
+
+.contact {
+    height: calc(100vh - 70px);
+    display: flex;
+
+    @include mobile {
+        min-height: calc(100vh - 70px);
+        height: auto;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .topContainer {
+            // border: 1px solid #000;
+            flex: 4;
+            width: 100%;
+            display: flex;
+            align-items: center;
+
+            @include mobile {
+                flex-direction: column;
+                flex: none;
+            }
+
+            .item {
+                flex: 4;
+                margin: 0 18px;
+                padding: 20px 0 25px 0;
+                text-decoration: none;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
+                text-align: center;
+                transition: all 0.4s ease;
+
+                &:hover {
+                    background-color: #83838317;
+                    box-shadow: none;
+
+                    .icon {
+                        color: black;
+                    }
+                }
+
+                @include mobile {
+                    margin: 20px;
+                    flex: none;
+                    width: 80%;
+                }
+
+                .icon {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 35px;
+                    padding: 8px;
+                    border: 2px dotted #f8e4e2;
+                    border-radius: 50%;
+                    color: crimson;
+
+                }
+
+                h3 {
+                    font-size: 20px;
+                    margin: 10px 0;
+                    color: #777777;
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 24px;
+                    padding: 0;
+                    color: black;
+                }
+            }
+        }
+        
+        .bottomContainer {
+            flex: 8;
+            width: 100%;
+            padding-top: 4px;
+            display: flex;
+
+            @include mobile {
+                flex: none;
+                width: 85%;
+            }
+
+            .imgContainer {
+                flex: 6;
+                width: 100%;
+                height: 100%;
+                margin: 0 20px;
+
+                @include mobile {
+                    display: none;
+                }
+
+                img {
+                    width: 100%;
+                    height: 98%;
+                }
+            }
+
+            .formContainer {
+                flex: 6;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                margin: 0 20px;
+                margin-bottom: 10px;
+                box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);         
+
+                @include mobile {
+                    width: 70%;
+                    padding: 20px;
+                }
+                
+                form {
+                    width: 100%;
+                    height: 90%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-evenly;
+
+                    @include ipad {
+                        height: 100%;
+                    }
+
+                    input {
+                        width: 300px;
+                        height: 30px;
+                        font-size: 16px;
+                        border: 1px solid $mainColor;
+                        border-radius: 4px;
+                        padding-left: 5px;
+
+                        @include ipad {
+                            height: 25px;
+                            font-size: 14px;
+                            width: 80%;
+                        };
+
+                        @include mobile {
+                            margin: 10px 0;
+                        };
+                    }
+
+                    textarea {
+                        width: 300px;
+                        height: 150px;
+                        border: 1px solid $mainColor;
+                        border-radius: 4px;
+                        padding-left: 5px;
+
+                        @include ipad {
+                            width: 80%;
+                            height: 100px;
+                        }
+
+                        @include mobile {
+                            margin: 10px 0;
+                        }
+                    }
+
+
+                    button {
+                        width: 100px;
+                        font-size: 15px;
+                        font-weight: 500;
+                        border-radius: 8px;
+                        outline: none;
+                        border: none;
+                        padding: 4px;
+                        background-color: crimson;
+                        color: white;
+                        text-align: center;
+
+                        &:focus {
+                            outline: none;
+                        }
+
+                        span {
+                            text-align: center;
+                            color: green;
+                        }
+
+                        @include ipad {
+                            width: 70%;
+                        }
+
+                        @include mobile {
+                            margin: 12px 0;
+                        }
+                    }
+                }
+                
+
+            }
+        }
+    }
+}
+
+

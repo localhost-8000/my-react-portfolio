@@ -1,0 +1,201 @@
+@import "../../global.scss";
+
+.projects {
+    height: calc(100vh - 70px);
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @include mobile {
+        min-height: calc(100vh - 70px);
+        height: fit-content;
+    }
+
+    .arrow {
+        height: 50px;
+        font-size: 50px;
+        position: absolute;
+        cursor: pointer;
+        color: $mainColor;
+
+        &.left {
+            left: 60px;
+
+            @include ipad {
+                left: 30px;
+            }
+
+        }
+
+        &.right {
+            right: 60px;
+
+            @include ipad {
+                right: 30px;
+            }
+        }
+    }
+
+    .slider {
+        height: 450px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 0.7s ease-in-out;
+
+        @include mobile {
+            height: 100%;
+        }
+
+        .container {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .item {
+                width: 900px;
+                height: 100%;
+                background-color: white;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include ipad {
+                    width: 80%;
+                    height: auto;
+                }
+                @include mobile {
+                    flex-direction: column;
+                    height: 95%;
+                    width: 90%;
+                }
+
+                .left {
+                    flex: 5;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    @include mobile {
+                        flex: 6;
+                    }
+
+                    .leftContainer {
+                        width: 100%;
+                        height: 95%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        padding: 10px 4px;
+
+                        @include mobile {
+                            padding: 6px 2px;
+                        }
+
+                        .topContainer {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            margin-top: 10px;
+
+                            .imgContainer {
+                                width: 60px;
+                                height: 60px;
+                                border-radius: 50%;
+                                background-color: rgb(245, 179, 155);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+    
+                                @include mobile {
+                                    width: 35px;
+                                    height: 35px;
+                                }
+    
+                                .icon {
+                                    font-size: 35px;
+    
+                                    @include mobile {
+                                        font-size: 30px;
+                                    }
+                                }
+                            }
+
+                            h2 {
+                                padding: 10px 0 0 0;
+                                font-size: 22px;
+
+                                @include mobile {
+                                    font-size: 20px;
+                                    padding: 8px 0 0 0;
+                                }
+                            }
+                        }
+
+                        .paraContainer {
+                            font-size: 14px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+
+                            p {
+                                padding: 1px 6px;
+                                text-align: center;
+                            }
+                        }
+
+                        .linkContainer {
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-evenly;
+
+                            a {
+                                display: flex;
+                                align-items: center;
+                                padding: 1px 4px;
+                                font-size: 15px;
+                                font-weight: 600;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                        }
+
+                    }
+                }
+
+                .right {
+                    flex: 7;
+                    height: 90%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 4px;
+                    background-color: whitesmoke;
+                    border-radius: 12px;
+                    // overflow: hidden;
+
+                    @include mobile {
+                        flex: 6;
+                        height: 95%;
+                    }
+
+                    img {
+                        width: 95%;
+                        
+                        @include mobile {
+                            width: 90%;
+                            height: 100%;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
