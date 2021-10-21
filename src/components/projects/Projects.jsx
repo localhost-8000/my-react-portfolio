@@ -22,6 +22,19 @@ export default function Projects() {
             url: "http://www.ancorenotes.com"
         },
         {
+            id: "3",
+            icon: (<Code className="icon"/>),
+            title: "Social Media Clone",
+            desc: [
+                ":- A simple social media clone",
+                ":- Used <b>MERN</b> stack and also <b>Firebase</b>",
+                ":- Upload post, profile and cover image and add friend feature",
+                ":- Working on implementing Chat"
+            ],
+            img: "https://user-images.githubusercontent.com/72190915/137743801-9426b6ab-9278-451d-b4be-da7651578e7f.png",
+            url: "https://github.com/Ankur-9598/MediaFrontend"
+        },
+        {
             id: "2",
             icon: (<DeveloperMode className="icon"/>),
             title: "Personal Portfolio",
@@ -50,8 +63,8 @@ export default function Projects() {
 
     const handleClick = (way) => {
         way === "left" 
-            ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 2)
-            : setCurrentSlide(currentSlide < 2 ? currentSlide + 1 : 0)
+            ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 3)
+            : setCurrentSlide(currentSlide < 3 ? currentSlide + 1 : 0)
     }
 
     return (

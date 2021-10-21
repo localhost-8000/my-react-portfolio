@@ -18,7 +18,7 @@ export default function Intro() {
     }, []);
 
     const handleClick = () => {
-        window.location.href = "https://drive.google.com/file/d/1UO6QRj0KbnqzwRMFQhsHA0romCmPF9b9/view?usp=sharing"
+        window.location.href = "https://drive.google.com/file/d/1tU6XFp8_XW2TNdxSWQ8gcGrkAQPuAU77/view?usp=sharing"
     }
 
     return (
