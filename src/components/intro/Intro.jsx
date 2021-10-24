@@ -13,12 +13,12 @@ export default function Intro() {
             typeSpeed: 110,
             backDelay: 1500,
             backSpeed: 50,
-            strings: ["I'm a Full Stack Web Developer", "Converting Dream into Code", "Love to learn new Skills"]
+            strings: ["I'm a Full Stack Web Developer", "Converting Dream into Code", "Love to learn new Skills", "Currently diving in React Native"]
         })
     }, []);
 
     const handleClick = () => {
-        window.location.href = "https://drive.google.com/file/d/1tU6XFp8_XW2TNdxSWQ8gcGrkAQPuAU77/view?usp=sharing"
+        window.location.href = "https://drive.google.com/file/d/1qX2yu5aUroQdr-tkjmsKWlnk5mtWwZCp/view?usp=sharing"
     }
 
     return (

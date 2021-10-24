@@ -22,7 +22,7 @@ export default function Projects() {
             url: "http://www.ancorenotes.com"
         },
         {
-            id: "3",
+            id: "2",
             icon: (<Code className="icon"/>),
             title: "Social Media Clone",
             desc: [
@@ -35,7 +35,20 @@ export default function Projects() {
             url: "https://github.com/Ankur-9598/MediaFrontend"
         },
         {
-            id: "2",
+            id: "3",
+            icon: (<DeveloperMode className="icon"/>),
+            title: "React Native Chat App",
+            desc: [
+                ":- A simple chat application, compatible in android and ios both",
+                ":- Used <b>React Native</b> and <b>Firebase</b>",
+                ":- Create profile, groups and chat in group",
+                ":- Working on improved authentication, UI and other features"
+            ],
+            img: "https://user-images.githubusercontent.com/72190915/138616011-0c84ca57-91a3-4c50-99a7-9f26be633ae2.jpg",
+            url: "https://github.com/Ankur-9598/react_Native_Chat_App"
+        },
+        {
+            id: "4",
             icon: (<DeveloperMode className="icon"/>),
             title: "Personal Portfolio",
             desc: [
@@ -48,7 +61,7 @@ export default function Projects() {
             url: "ancorenotes.com"
         },
         {
-            id: "3",
+            id: "5",
             icon: (<DeveloperMode className="icon"/>),
             title: "Personal Portfolio",
             desc: [
@@ -58,13 +71,13 @@ export default function Projects() {
             ],
             img: "assets/portfolio1.png",
             url: "https://myportfolio-rahul01.herokuapp.com/"
-        }
+        },
     ];
 
     const handleClick = (way) => {
         way === "left" 
-            ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 3)
-            : setCurrentSlide(currentSlide < 3 ? currentSlide + 1 : 0)
+            ? setCurrentSlide(currentSlide > 0 ? currentSlide - 1 : 4)
+            : setCurrentSlide(currentSlide < 4 ? currentSlide + 1 : 0)
     }
 
     return (

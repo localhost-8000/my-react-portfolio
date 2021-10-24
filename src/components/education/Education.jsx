@@ -18,7 +18,7 @@ export default function Education() {
                 "Secured 9.37 CGPA till current semester",
                 "Actively participated in Tech and Cultural festival"
             ],
-            markUrl: "https://drive.google.com/file/d/14U0oxwSVSRvffWVFlcoGT4USDAw8JjfU/view?usp=sharing"
+            markUrl: "https://drive.google.com/file/d/1I2vn5xU9YSwlp_2w1ATU4EoQoZfb_vud/view?usp=sharing"
         },
         {
             id: 1,
